@@ -3,105 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Allan Thomson - Portfolio</title>
+  <title>Allan Thomson | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: Arial, sans-serif; }
-    .hero-bg {
-      background: linear-gradient(135deg, #0f172a, #1e3a8a, #0f172a);
-      background-size: 200% 200%;
-      animation: gradientMove 10s ease infinite;
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .gradient-bg {
+      background: radial-gradient(circle at top left, #0f172a 0%, #111827 40%, #1e293b 100%);
     }
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    .glass {
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.08);
     }
   </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-slate-950 text-white">
 
-<nav class="fixed top-0 w-full bg-white/90 backdrop-blur shadow-sm z-50">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-    <h1 class="font-bold text-lg">Allan Thomson</h1>
-    <div class="hidden md:flex gap-6 text-sm">
-      <a href="#story">My Story</a>
-      <a href="#skills">Skills</a>
-      <a href="#beyond">Beyond Work</a>
-      <a href="#contact">Contact</a>
+<nav class="fixed top-0 w-full z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
+  <div class="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+    <div class="font-semibold tracking-tight text-lg">Allan Thomson</div>
+    <div class="hidden md:flex gap-8 text-sm text-slate-300">
+      <a href="#about" class="hover:text-white transition">About Me</a>
+      <a href="#" class="hover:text-white transition">Education</a>
+      <a href="#" class="hover:text-white transition">Experience</a>
+      <a href="#" class="hover:text-white transition">Recommendation</a>
+      <a href="#contact" class="hover:text-white transition">Contact Me</a>
     </div>
   </div>
 </nav>
 
-<section class="hero-bg min-h-screen flex items-center justify-center text-center text-white px-6">
-  <div class="max-w-4xl">
-    <h1 class="text-5xl md:text-7xl font-bold mb-6">Allan Thomson</h1>
-    <p class="text-xl md:text-2xl mb-6">Fintech Specialist | Online Payments | API Integrations | Customer Success | Product Management</p>
-    <p class="max-w-3xl mx-auto text-lg opacity-90">
-      I help businesses deliver smooth and scalable digital experiences ranging from integrating complex systems and supporting customer onboarding to enabling product adoption and ensuring long-term client success.
-    </p>
-    <div class="mt-8 flex gap-4 justify-center flex-wrap">
-      <a href="#story" class="bg-white text-slate-900 px-6 py-3 rounded-xl font-semibold">Explore My Journey</a>
-      <a href="#contact" class="border border-white px-6 py-3 rounded-xl">Let's Connect</a>
+<section id="about" class="gradient-bg min-h-screen flex items-center pt-28">
+  <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-14 items-center">
+
+    <div>
+      <p class="text-cyan-400 text-sm font-medium mb-4 tracking-wide uppercase">Technical Customer Success • Solutions Engineering • Product Operations</p>
+      <h1 class="text-5xl md:text-7xl font-bold leading-tight tracking-tight mb-6">
+        Building scalable digital experiences across product, payments & customer systems.
+      </h1>
+      <p class="text-slate-300 text-lg leading-8 max-w-xl mb-8">
+        I help businesses simplify technical complexity by bridging customer needs, implementation workflows, APIs, and product adoption. My experience spans technical support engineering, payment infrastructure, and enterprise onboarding across multiple regions.
+      </p>
+
+      <div class="flex gap-4 flex-wrap">
+        <a href="#contact" class="px-6 py-3 rounded-xl bg-cyan-500 text-slate-950 font-semibold hover:bg-cyan-400 transition">Let's Connect</a>
+        <a href="#story" class="px-6 py-3 rounded-xl border border-white/15 hover:bg-white/5 transition">Explore More</a>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+      <div class="glass rounded-3xl p-3 col-span-2">
+        <img src="your-main-image.jpg" class="rounded-2xl w-full h-72 object-cover" alt="Allan" />
+      </div>
+      <div class="glass rounded-3xl p-3">
+        <img src="your-image-2.jpg" class="rounded-2xl w-full h-44 object-cover" alt="Beyond work" />
+      </div>
+      <div class="glass rounded-3xl p-3">
+        <img src="your-image-3.jpg" class="rounded-2xl w-full h-44 object-cover" alt="Beyond work" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="story" class="py-24 bg-slate-950">
+  <div class="max-w-5xl mx-auto px-8">
+    <h2 class="text-4xl font-bold mb-10">My Story</h2>
+    <div class="space-y-6 text-slate-300 text-lg leading-8">
+      <p>I am currently based in Cork, Ireland, pursuing an MSc in Information Systems for Business Performance at University College Cork while working remotely as a Technical Support Engineer at MoneyHash.</p>
+      <p>Born and raised in Kuwait, I have spent the last five years working at the intersection of customer success, technical implementation, and product enablement.</p>
+      <p>While I have strong domain depth in fintech, my broader interest lies in designing technical systems, implementation journeys, and scalable customer experiences that drive adoption.</p>
+      <p>Long term, I see myself growing into roles such as Solutions Architect, Technical Account Manager, or Technical Customer Success leadership.</p>
     </div>
   </div>
 </section>
 
-<section id="story" class="max-w-5xl mx-auto px-6 py-20">
-  <h2 class="text-4xl font-bold mb-8">My Story</h2>
-  <div class="space-y-6 text-lg leading-8 text-slate-700">
-    <p>I am currently based in Cork, Ireland, pursuing an MSc in Information Systems for Business Performance at University College Cork, while continuing to work remotely with a fintech company across the Middle East and Africa.</p>
-    <p>I was born and raised in Kuwait, and over the last five years I have worked closely with technology and payments, helping businesses build digital experiences that are reliable, simple to use, and ready to scale.</p>
-    <p>Much of my work has involved payment gateways, cards, wallets, subscriptions, and fraud prevention across websites, mobile apps, and enterprise systems.</p>
-    <p>Alongside my studies, I work as a Technical Support Engineer at MoneyHash, helping merchants design and implement payment flows that work in real-world conditions. Over time, I see myself growing into a Solutions Architect role.</p>
-  </div>
-</section>
-
-<section id="skills" class="bg-white py-20">
-  <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-4xl font-bold mb-10 text-center">What I Bring to the Table</h2>
+<section class="py-24 bg-slate-900">
+  <div class="max-w-6xl mx-auto px-8">
+    <h2 class="text-4xl font-bold mb-12">What I Bring to the Table</h2>
     <div class="grid md:grid-cols-3 gap-6">
-      <div class="p-6 rounded-2xl shadow-lg bg-slate-50">
-        <h3 class="font-bold text-xl mb-3">Payments Expertise</h3>
-        <p>Payment gateways, cards, wallets, subscriptions, fraud prevention, merchant onboarding.</p>
+      <div class="glass p-8 rounded-3xl">
+        <h3 class="text-xl font-semibold mb-4">Technical Problem Solving</h3>
+        <p class="text-slate-300 leading-7">API workflows, debugging, issue resolution, implementation architecture, merchant integrations.</p>
       </div>
-      <div class="p-6 rounded-2xl shadow-lg bg-slate-50">
-        <h3 class="font-bold text-xl mb-3">Technical Collaboration</h3>
-        <p>API integrations, troubleshooting, payment flows, technical support, implementation design.</p>
+      <div class="glass p-8 rounded-3xl">
+        <h3 class="text-xl font-semibold mb-4">Customer & Product Thinking</h3>
+        <p class="text-slate-300 leading-7">Onboarding, adoption strategy, stakeholder communication, process optimisation.</p>
       </div>
-      <div class="p-6 rounded-2xl shadow-lg bg-slate-50">
-        <h3 class="font-bold text-xl mb-3">Business & Product</h3>
-        <p>Customer success, product adoption, client success, scalable digital experiences.</p>
+      <div class="glass p-8 rounded-3xl">
+        <h3 class="text-xl font-semibold mb-4">Domain Experience</h3>
+        <p class="text-slate-300 leading-7">Deep exposure to digital payments, subscriptions, fraud prevention, enterprise operations.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="beyond" class="max-w-5xl mx-auto px-6 py-20">
-  <h2 class="text-4xl font-bold mb-8">Beyond Work</h2>
-  <p class="text-lg leading-8 text-slate-700 mb-6">Problem solving at work, creativity and adrenaline outside of it.</p>
-  <div class="grid md:grid-cols-2 gap-6">
-    <div class="p-6 rounded-2xl border bg-white shadow-sm">
-      <h3 class="font-bold mb-2">Music</h3>
-      <p>Played keyboard in church for many years and continue to stay connected to music.</p>
-    </div>
-    <div class="p-6 rounded-2xl border bg-white shadow-sm">
-      <h3 class="font-bold mb-2">Football</h3>
-      <p>Lifelong Arsenal fan — a masterclass in patience, resilience, and emotional damage.</p>
+<section id="contact" class="py-24 bg-slate-950 text-center">
+  <div class="max-w-3xl mx-auto px-8">
+    <h2 class="text-4xl font-bold mb-6">Let's Connect</h2>
+    <p class="text-slate-300 text-lg mb-8">Open to technical customer success, solutions architecture and technical account management opportunities.</p>
+    <div class="space-y-3 text-slate-300">
+      <p>Email: allankt1998@gmail.com</p>
+      <p>LinkedIn: linkedin.com/in/allan-thomson</p>
     </div>
   </div>
-</section>
-
-<section id="contact" class="bg-slate-900 text-white py-20 text-center px-6">
-  <h2 class="text-4xl font-bold mb-6">Let's Connect</h2>
-  <p class="mb-8 text-lg">Always happy to connect, collaborate or discuss new possibilities.</p>
-  <div class="space-y-3 text-lg">
-    <p>Email: allankt1998@gmail.com</p>
-    <p>Phone: +353 870391037</p>
-    <p>LinkedIn: linkedin.com/in/allan-thomson</p>
-  </div>
-  <p class="mt-8 opacity-80">Looking forward to connecting and creating meaningful digital experiences together.</p>
 </section>
 
 </body>
