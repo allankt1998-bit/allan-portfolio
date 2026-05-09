@@ -3,235 +3,214 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Allan Thomson | Portfolio</title>
+<title>Allan Thomson | Solutions & Payments</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-
 :root{
-  --bg:#0f172a;
-  --card:#1e293b;
-  --text:#f8fafc;
-  --muted:#cbd5e1;
-  --primary:#06b6d4;
+  --bg:#0b1220;
+  --card:#111a2e;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --accent:#06b6d4;
 }
 
+/* BASE */
 body{
-  font-family:Inter;
-  background:linear-gradient(135deg,#030712,#0f172a);
+  margin:0;
+  font-family:Inter, sans-serif;
+  background:radial-gradient(circle at top,#0f172a,#050814);
   color:var(--text);
   overflow-x:hidden;
 }
 
-h1,h2,h3{font-family:Syne}
+h1,h2,h3{
+  font-family:Syne,sans-serif;
+}
 
 /* NAV */
 nav{
   position:fixed;
   top:0;
   width:100%;
-  background:rgba(15,23,42,.9);
+  background:rgba(10,15,25,0.85);
   backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(255,255,255,.05);
   z-index:1000;
+  border-bottom:1px solid rgba(255,255,255,0.05);
 }
 
-.navwrap{
-  max-width:1200px;
+.nav-wrap{
+  max-width:1100px;
   margin:auto;
-  padding:1rem 2rem;
+  padding:18px 20px;
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
 
-.links{
-  display:flex;
-  gap:2rem;
+.logo{
+  font-weight:700;
 }
 
-.links a{color:var(--muted);text-decoration:none}
+.links{
+  display:flex;
+  gap:25px;
+}
 
+.links a{
+  color:var(--muted);
+  text-decoration:none;
+}
+
+.links a:hover{
+  color:var(--accent);
+}
+
+/* MOBILE MENU */
 .hamburger{
   display:none;
-  font-size:1.8rem;
-  background:none;
-  border:none;
+  font-size:26px;
+  cursor:pointer;
   color:white;
 }
 
 .mobile{
   display:none;
   flex-direction:column;
-  padding:1rem 2rem;
-  background:#0f172a;
-}
-
-.mobile a{
-  padding:.8rem 0;
-  color:var(--muted);
+  padding:15px 20px;
+  gap:10px;
 }
 
 /* HERO */
 .hero{
-  padding:8rem 2rem 4rem;
-}
-
-.herogrid{
-  max-width:1200px;
-  margin:auto;
   display:grid;
-  grid-template-columns:1.3fr 1fr;
-  gap:3rem;
-  align-items:center;
+  grid-template-columns:1.2fr 1fr;
+  gap:40px;
+  max-width:1100px;
+  margin:120px auto 60px;
+  padding:0 20px;
 }
 
 .hero h1{
-  font-size:3rem;
+  font-size:48px;
   line-height:1.2;
 }
 
-.hero p{color:var(--muted);margin-top:1rem}
-
-.buttons{
-  display:flex;
-  gap:1rem;
-  margin-top:2rem;
-  flex-wrap:wrap;
+.hero p{
+  color:var(--muted);
+  line-height:1.7;
 }
 
-.btn{
-  padding:.9rem 1.6rem;
-  border-radius:10px;
-  font-weight:600;
-  text-decoration:none;
-}
-
-.primary{background:var(--primary);color:#000}
-.secondary{border:1px solid var(--primary);color:var(--primary)}
-
-.heroimg img{
+.hero img{
   width:100%;
-  border-radius:16px;
+  border-radius:20px;
 }
 
-/* SECTION */
+/* SECTIONS */
 section{
-  padding:5rem 2rem;
-  max-width:1200px;
+  max-width:1100px;
   margin:auto;
+  padding:60px 20px;
 }
 
-.sectiontitle{
-  font-size:2.2rem;
-  margin-bottom:2rem;
+h2{
+  font-size:34px;
+  margin-bottom:25px;
 }
 
-/* WHAT I BRING */
-.grid3{
+/* CARDS */
+.grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:1.5rem;
+  gap:20px;
 }
 
 .card{
   background:var(--card);
-  padding:2.5rem;
-  border-radius:14px;
-  transition:.3s;
+  padding:25px;
+  border-radius:16px;
+  transition:0.25s;
+  will-change:transform;
+  transform:translateZ(0);
 }
 
 .card:hover{
   transform:translateY(-6px);
-  border:1px solid var(--primary);
+  box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
-.card h3{
-  font-size:1.2rem;
-  margin-bottom:1rem;
-}
-
-.card p{
+/* STORY */
+.story p{
   color:var(--muted);
-  line-height:1.6;
-}
-
-.tags{
-  margin-top:1rem;
-  font-size:.75rem;
-  color:var(--primary);
-  letter-spacing:.08em;
+  line-height:1.8;
+  margin-bottom:15px;
 }
 
 /* BEYOND */
-.beyondgrid{
+.beyond-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:1rem;
+  gap:15px;
 }
 
-.beyondgrid img{
+.beyond-grid img{
   width:100%;
-  height:240px;
-  object-fit:cover;
-  border-radius:12px;
-}
-
-.beyondtext{
-  margin-top:2rem;
-  color:var(--muted);
-  line-height:1.8;
+  border-radius:14px;
 }
 
 /* CONTACT */
-.contactgrid{
+.contact-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:1.5rem;
+  gap:20px;
 }
 
 .contact{
   background:var(--card);
-  padding:2rem;
-  border-radius:14px;
+  padding:25px;
+  border-radius:16px;
   text-align:center;
-  transition:.3s;
-  text-decoration:none;
-  color:white;
+  transition:0.3s;
+  cursor:pointer;
 }
 
 .contact:hover{
   transform:translateY(-6px);
-  border:1px solid var(--primary);
 }
 
-.icon{
-  font-size:2rem;
-  margin-bottom:1rem;
-  color:var(--primary);
+.contact svg{
+  width:26px;
+  height:26px;
+  margin-bottom:10px;
+  fill:var(--accent);
 }
 
-.label{font-weight:600}
-.value{color:var(--muted);margin-top:.5rem;font-size:.9rem}
+/* LINKEDIN SVG */
+.linkedin{
+  width:28px;
+  height:28px;
+  fill:#0a66c2;
+}
 
 /* MOBILE */
 @media(max-width:768px){
 
-.herogrid{grid-template-columns:1fr}
-
-.grid3,.contactgrid,.beyondgrid{
+.hero{
   grid-template-columns:1fr;
 }
 
-.links{display:none}
+.hero h1{
+  font-size:34px;
+}
 
-.hamburger{display:block}
+.grid,.contact-grid,.beyond-grid{
+  grid-template-columns:1fr;
+}
 
-.mobile.active{display:flex}
+.links{display:none;}
 
-.hero h1{font-size:2.2rem}
+.hamburger{display:block;}
 }
 </style>
 </head>
@@ -240,8 +219,8 @@ section{
 
 <!-- NAV -->
 <nav>
-<div class="navwrap">
-  <div><b>Allan Thomson</b></div>
+<div class="nav-wrap">
+  <div class="logo">Allan Thomson</div>
 
   <div class="links">
     <a href="#story">Story</a>
@@ -250,10 +229,10 @@ section{
     <a href="#contact">Contact</a>
   </div>
 
-  <button class="hamburger" onclick="toggle()">☰</button>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
 </div>
 
-<div class="mobile" id="m">
+<div class="mobile" id="mobile">
   <a href="#story">Story</a>
   <a href="#bring">What I Bring</a>
   <a href="#beyond">Beyond</a>
@@ -262,58 +241,48 @@ section{
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-<div class="herogrid">
+<div class="hero">
+  <div>
+    <h1>Solutions Engineering for Modern Payment Systems</h1>
+    <p>5+ years working across India & GCC in fintech, helping enterprises design, integrate and scale payment systems across APIs, banks and global gateways.</p>
+  </div>
 
-<div>
-<h1>Technical Customer Success & Solutions Engineering</h1>
-<p>5+ years across India & Middle East in fintech, APIs, and enterprise payment systems.</p>
-
-<div class="buttons">
-<a class="btn primary" href="#story">Read My Story</a>
-<a class="btn secondary" href="#contact">Get in Touch</a>
+  <img src="allanmain.jpg"/>
 </div>
-</div>
-
-<div class="heroimg">
-<img src="allanmain.jpg"/>
-</div>
-
-</div>
-</section>
 
 <!-- STORY -->
 <section id="story">
-<h2 class="sectiontitle">My Story</h2>
-<p style="color:#cbd5e1;line-height:1.8">
-I am currently based in Ireland pursuing a Master’s in Information Systems for Business Performance at University College Cork. The course helps bridge technical systems with business needs.
-<br><br>
-Across 5+ years in India and the Middle East, I have worked in fintech across payment systems, APIs, and enterprise onboarding helping businesses build scalable digital payment experiences.
-</p>
+<h2>My Story</h2>
+<div class="story">
+
+<p>I am currently based in Ireland, pursuing a Master’s in Information Systems for Business Performance at University College Cork. After completing my bachelor’s in Mechanical Engineering, I moved into the tech industry, where this program helps bridge technical systems with business needs.</p>
+
+<p>Over the last 5+ years, I have worked across India and the Middle East in fintech roles involving enterprise payment systems, APIs, and merchant onboarding. This has given me deep exposure to how businesses connect with banks, payment providers, and digital platforms to deliver reliable customer experiences.</p>
+
+<p>I currently work as a Technical Support Engineer at MoneyHash, supporting enterprise merchants in building and running scalable payment flows across multiple regions and providers.</p>
+
+</div>
 </section>
 
 <!-- WHAT I BRING -->
 <section id="bring">
-<h2 class="sectiontitle">What I Bring</h2>
+<h2>What I Bring</h2>
 
-<div class="grid3">
+<div class="grid">
 
 <div class="card">
-<h3>Enterprise Client Engagement</h3>
-<p>Working with enterprise clients, leading product demos and aligning technical and business stakeholders.</p>
-<div class="tags">CLIENTS • DEMOS • STAKEHOLDERS</div>
+<h3>Enterprise Client Work</h3>
+<p>Experience working directly with enterprise clients, leading product demos and implementation discussions with senior stakeholders across complex environments.</p>
 </div>
 
 <div class="card">
-<h3>Technical Problem Solving</h3>
-<p>Understanding requirements and identifying the most effective technical approach for implementation.</p>
-<div class="tags">APIs • LOGIC • INTEGRATION</div>
+<h3>Solution Thinking</h3>
+<p>Ability to break down business requirements and design the most practical technical approach for onboarding, integration, and long-term scalability.</p>
 </div>
 
 <div class="card">
-<h3>Payments & Systems</h3>
-<p>Experience across global payment ecosystems, APIs, onboarding and enterprise integrations.</p>
-<div class="tags">FINTECH • PAYMENTS • SYSTEMS</div>
+<h3>Payment Systems Expertise</h3>
+<p>Hands-on experience across global payment gateways, banks, and APIs, ensuring smooth integration and reliable transaction flows.</p>
 </div>
 
 </div>
@@ -321,49 +290,55 @@ Across 5+ years in India and the Middle East, I have worked in fintech across pa
 
 <!-- BEYOND -->
 <section id="beyond">
-<h2 class="sectiontitle">Beyond Work</h2>
+<h2>Beyond Work</h2>
 
-<div class="beyondgrid">
-<img src="allanstanding.jpeg"/>
-<img src="skydiving.png"/>
-<img src="keyboard.png"/>
+<div class="beyond-grid">
+  <img src="allanstanding.jpeg"/>
+  <img src="skydiving.png"/>
+  <img src="keyboard.png"/>
 </div>
 
-<p class="beyondtext">
-I’ve played keyboard in church for years, which taught patience and consistency. I’m also a long-time Arsenal fan, which teaches resilience. Recently, I’ve been exploring adventurous experiences like skydiving in Dubai.
+<p style="color:var(--muted); margin-top:20px;">
+Music has been part of my life through playing keyboard in church for many years. I am also a long-time Arsenal fan, which has taught patience, consistency and perspective over time. More recently, I’ve started exploring adventurous experiences like skydiving in Dubai.
 </p>
+
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-<h2 class="sectiontitle">Let’s Connect</h2>
+<h2>Let’s Connect</h2>
 
-<div class="contactgrid">
+<div class="contact-grid">
 
-<a href="mailto:allankt1998@gmail.com" class="contact">
-<div class="icon">📧</div>
-<div class="label">Email</div>
-<div class="value">allankt1998@gmail.com</div>
+<a class="contact" href="mailto:allankt1998@gmail.com">
+<svg viewBox="0 0 24 24"><path d="M2 4h20v16H2zM4 6l8 6 8-6"/></svg>
+<p>Email</p>
+<p>allankt1998@gmail.com</p>
 </a>
 
-<a href="tel:+353870391037" class="contact">
-<div class="icon">📞</div>
-<div class="label">Phone</div>
-<div class="value">+353 870 391 037</div>
-</a>
+<div class="contact">
+<svg viewBox="0 0 24 24"><path d="M6 2h12v20H6z"/></svg>
+<p>Phone</p>
+<p>+353 870 391 037</p>
+</div>
 
-<a href="https://linkedin.com/in/allan-thomson" class="contact">
-<div class="icon">💼</div>
-<div class="label">LinkedIn</div>
-<div class="value">Connect with me</div>
+<a class="contact" href="https://linkedin.com/in/allan-thomson" target="_blank">
+
+<!-- OFFICIAL LINKEDIN SVG -->
+<svg class="linkedin" viewBox="0 0 24 24">
+<path d="M4 3C4 4.1 3.1 5 2 5S0 4.1 0 3s.9-2 2-2 2 .9 2 2zM0 8h4v16H0V8zm7 0h4v2.2c.6-1.2 2.1-2.2 4.3-2.2C19.7 8 22 10.2 22 14.3V24h-4v-8.6c0-2-1-3.4-2.8-3.4-1.7 0-3.2 1.2-3.2 3.4V24H7V8z"/>
+</svg>
+
+<p>LinkedIn</p>
+<p>Connect</p>
 </a>
 
 </div>
 </section>
 
 <script>
-function toggle(){
-document.getElementById("m").classList.toggle("active");
+function toggleMenu(){
+  document.getElementById("mobile").classList.toggle("active");
 }
 </script>
 
