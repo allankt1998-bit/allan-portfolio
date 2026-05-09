@@ -10,15 +10,31 @@
   <style>
     body { font-family: Inter, sans-serif; scroll-behavior: smooth; }
 
-    .grid-bg {
+    .bg-grid {
       background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0);
-      background-size: 36px 36px;
+      background-size: 38px 38px;
     }
 
     .glass {
       background: rgba(255,255,255,0.06);
-      backdrop-filter: blur(14px);
+      backdrop-filter: blur(16px);
       border: 1px solid rgba(255,255,255,0.08);
+      transition: all 0.25s ease;
+    }
+
+    .glass:hover {
+      transform: translateY(-4px);
+      border-color: rgba(34,211,238,0.4);
+      box-shadow: 0 10px 30px rgba(34,211,238,0.08);
+    }
+
+    .fade {
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -31,47 +47,48 @@
 
     <div class="font-semibold">Allan Thomson</div>
 
-    <!-- desktop menu -->
     <div class="hidden md:flex gap-8 text-sm text-slate-300">
       <a href="#about" class="hover:text-white">About</a>
-      <a href="#story" class="hover:text-white">My Story</a>
-      <a href="#skills" class="hover:text-white">What I Bring</a>
-      <a href="#beyond" class="hover:text-white">Beyond Work</a>
+      <a href="#story" class="hover:text-white">Story</a>
+      <a href="#skills" class="hover:text-white">Capabilities</a>
+      <a href="#beyond" class="hover:text-white">Beyond</a>
       <a href="#contact" class="hover:text-white">Contact</a>
     </div>
 
-    <!-- mobile button -->
     <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')"
-      class="md:hidden text-white text-2xl">☰</button>
+      class="md:hidden text-2xl">☰</button>
 
   </div>
 
-  <!-- mobile menu -->
   <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 text-slate-300">
     <a href="#about" class="block py-2">About</a>
-    <a href="#story" class="block py-2">My Story</a>
-    <a href="#skills" class="block py-2">What I Bring</a>
-    <a href="#beyond" class="block py-2">Beyond Work</a>
+    <a href="#story" class="block py-2">Story</a>
+    <a href="#skills" class="block py-2">Capabilities</a>
+    <a href="#beyond" class="block py-2">Beyond</a>
     <a href="#contact" class="block py-2">Contact</a>
   </div>
 </nav>
 
-<!-- HERO -->
-<section id="about" class="min-h-screen pt-28 grid-bg flex items-center">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
+<!-- HERO (Stripe-style narrative) -->
+<section id="about" class="min-h-screen pt-28 bg-grid flex items-center">
+  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
 
-    <div>
-      <h1 class="text-5xl md:text-6xl font-bold mb-6">
+    <div class="fade">
+      <h1 class="text-5xl md:text-6xl font-semibold leading-tight mb-6">
         Technical Customer Success & Solutions Engineering
       </h1>
 
-      <p class="text-slate-300 text-lg leading-8 mb-8">
-        5+ years of international experience across India and the Middle East working on payment systems, API integrations, and enterprise onboarding.
+      <p class="text-slate-300 text-lg leading-8 mb-6">
+        5+ years of international experience across India and the Middle East building and supporting enterprise payment systems, API integrations, and merchant onboarding flows.
+      </p>
+
+      <p class="text-slate-400 mb-8">
+        Focused on translating complex technical systems into reliable, scalable customer experiences.
       </p>
 
       <div class="flex gap-4">
-        <a href="#story" class="px-6 py-3 bg-cyan-500 text-slate-950 rounded-xl font-semibold">View Story</a>
-        <a href="#contact" class="px-6 py-3 border border-white/15 rounded-xl">Connect</a>
+        <a href="#story" class="px-6 py-3 rounded-xl bg-cyan-500 text-slate-950 font-semibold">Explore Story</a>
+        <a href="#contact" class="px-6 py-3 rounded-xl border border-white/15">Connect</a>
       </div>
     </div>
 
@@ -84,61 +101,63 @@
   </div>
 </section>
 
-<!-- STORY -->
-<section id="story" class="py-24 bg-slate-900">
+<!-- STORY (structured narrative) -->
+<section id="story" class="py-28 bg-slate-900">
   <div class="max-w-4xl mx-auto px-6">
 
-    <h2 class="text-4xl font-bold mb-8">My Story</h2>
+    <h2 class="text-4xl font-semibold mb-10">My Story</h2>
 
-    <p class="text-slate-300 text-lg leading-8 mb-4">
-      I am currently based in Cork, Ireland, where I am pursuing an MSc at University College Cork while working remotely with a fintech company across the Middle East and Africa.
+    <p class="text-slate-300 text-lg leading-8 mb-6">
+      I am currently based in Cork, Ireland, where I am pursuing an MSc in Information Systems for Business Performance at <a class="text-cyan-400" href="https://www.ucc.ie" target="_blank">University College Cork</a>, while working remotely with a fintech company across the Middle East and Africa.
     </p>
 
-    <div id="moreStory" class="hidden space-y-4 text-slate-300 text-lg leading-8">
-      <p>Born and raised in Kuwait, I have spent 5+ years working across payments and enterprise systems including gateways, wallets, subscriptions, and fraud prevention.</p>
-      <p>Currently at MoneyHash, I help merchants design and implement real-world payment flows and resolve complex technical challenges.</p>
-      <p>My long-term direction is moving toward Solutions Architecture and technical product design roles.</p>
-    </div>
+    <p class="text-slate-300 text-lg leading-8 mb-6">
+      Born and raised in Kuwait, I have spent over five years working across enterprise payment systems and customer implementation environments, helping businesses onboard and operate digital financial infrastructure across multiple regions.
+    </p>
 
-    <button id="toggleBtn"
-      onclick="toggleStory()"
-      class="mt-6 text-cyan-400">
-      Read more ↓
-    </button>
+    <p class="text-slate-300 text-lg leading-8 mb-6">
+      At MoneyHash, I work as a Technical Support Engineer supporting merchants in designing, implementing, and stabilising payment flows in real-world production systems.
+    </p>
+
+    <p class="text-slate-300 text-lg leading-8">
+      My long-term direction is moving toward Solutions Architecture and technical customer-facing system design roles.
+    </p>
 
   </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills" class="py-24 bg-slate-950">
+<!-- CAPABILITIES -->
+<section id="skills" class="py-28 bg-slate-950">
   <div class="max-w-6xl mx-auto px-6">
 
-    <h2 class="text-4xl font-bold mb-12">What I Bring</h2>
+    <h2 class="text-4xl font-semibold mb-12">What I Bring</h2>
 
     <div class="grid md:grid-cols-3 gap-6">
+
       <div class="glass p-8 rounded-3xl">
-        <h3 class="font-semibold mb-2">Technical Problem Solving</h3>
-        <p class="text-slate-300">APIs, debugging, integrations, implementation systems.</p>
+        <h3 class="font-semibold mb-3">Systems & Problem Solving</h3>
+        <p class="text-slate-300">Diagnosing issues across APIs, integrations, and production systems to ensure stable execution.</p>
       </div>
 
       <div class="glass p-8 rounded-3xl">
-        <h3 class="font-semibold mb-2">Customer & Product Thinking</h3>
-        <p class="text-slate-300">Onboarding, workflows, adoption, stakeholder alignment.</p>
+        <h3 class="font-semibold mb-3">Customer Implementation</h3>
+        <p class="text-slate-300">Translating business requirements into technical onboarding and adoption journeys.</p>
       </div>
 
       <div class="glass p-8 rounded-3xl">
-        <h3 class="font-semibold mb-2">Fintech Domain Experience</h3>
-        <p class="text-slate-300">Payments, wallets, subscriptions, fraud systems.</p>
+        <h3 class="font-semibold mb-3">Enterprise Payments</h3>
+        <p class="text-slate-300">Working with online payment systems, merchant platforms, and regional financial infrastructure.</p>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- BEYOND -->
-<section id="beyond" class="py-24 bg-slate-900">
+<section id="beyond" class="py-28 bg-slate-900">
   <div class="max-w-6xl mx-auto px-6">
 
-    <h2 class="text-4xl font-bold mb-6">Beyond Work</h2>
+    <h2 class="text-4xl font-semibold mb-8">Beyond Work</h2>
 
     <div class="grid md:grid-cols-3 gap-6">
       <img src="skydiving.png" class="rounded-2xl h-80 w-full object-cover" />
@@ -150,10 +169,10 @@
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-24 bg-slate-950">
+<section id="contact" class="py-28 bg-slate-950">
   <div class="max-w-5xl mx-auto px-6 text-center">
 
-    <h2 class="text-4xl font-bold mb-10">Let's Connect</h2>
+    <h2 class="text-4xl font-semibold mb-10">Let's Connect</h2>
 
     <div class="grid md:grid-cols-3 gap-6">
 
@@ -173,23 +192,9 @@
       </div>
 
     </div>
+
   </div>
 </section>
-
-<script>
-function toggleStory() {
-  const el = document.getElementById('moreStory');
-  const btn = document.getElementById('toggleBtn');
-
-  el.classList.toggle('hidden');
-
-  if (el.classList.contains('hidden')) {
-    btn.innerText = "Read more ↓";
-  } else {
-    btn.innerText = "Show less ↑";
-  }
-}
-</script>
 
 </body>
 </html>
