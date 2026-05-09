@@ -80,6 +80,41 @@
       color: var(--primary);
     }
 
+    /* MOBILE MENU BUTTON */
+    .mobile-menu-btn {
+      display: none;
+      background: rgba(6,182,212,0.15);
+      border: 1px solid rgba(6,182,212,0.4);
+      border-radius: 10px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .mobile-menu-btn span {
+      width: 22px;
+      height: 2px;
+      background: var(--primary);
+      display: block;
+      margin: 4px 0;
+      border-radius: 2px;
+    }
+
+    #mobile-menu {
+      display: none;
+      flex-direction: column;
+      padding: 1rem 2rem;
+      background: var(--bg-dark);
+    }
+
+    #mobile-menu.active {
+      display: flex;
+    }
+
+    @media (max-width:768px){
+      .nav-links { display:none; }
+      .mobile-menu-btn { display:block; }
+    }
+
     /* HERO */
     #hero {
       padding-top: 8rem;
@@ -99,6 +134,12 @@
     @media (max-width:768px){
       .hero-wrapper {
         grid-template-columns: 1fr;
+        padding: 0 1rem;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+        line-height: 1.3;
       }
     }
 
@@ -116,28 +157,6 @@
     .supporting-text {
       color: var(--text-light);
       margin-bottom: 2rem;
-    }
-
-    /* BUTTONS */
-    .cta-buttons {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      font-weight: 600;
-    }
-
-    .btn-primary {
-      background: var(--primary);
-      color: #000;
-    }
-
-    .btn-secondary {
-      border: 1px solid var(--primary);
     }
 
     /* SECTIONS */
@@ -181,10 +200,6 @@
       border-color: var(--primary);
     }
 
-    .capability-card h3 {
-      margin-bottom: 0.8rem;
-    }
-
     /* CONTACT */
     .contact-grid {
       display: grid;
@@ -208,18 +223,33 @@
 <nav>
   <div class="container">
     <div class="logo">Allan Thomson</div>
+
     <ul class="nav-links">
       <li><a href="#story">Story</a></li>
       <li><a href="#capabilities">Capabilities</a></li>
       <li><a href="#beyond">Beyond</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+
+    <button class="mobile-menu-btn" id="mobile-menu-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div id="mobile-menu">
+    <a href="#story">Story</a>
+    <a href="#capabilities">Capabilities</a>
+    <a href="#beyond">Beyond</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <!-- HERO -->
 <section id="hero">
   <div class="hero-wrapper">
+
     <div class="hero-content">
       <h1>Technical Customer Success & Solutions Engineering</h1>
 
@@ -228,7 +258,7 @@
       </p>
 
       <p class="supporting-text">
-        5+ years across India and the Middle East in enterprise onboarding, APIs, and payment system implementation.
+        5+ years of experience across India and the Middle East in enterprise onboarding, payment integrations, and system implementation.
       </p>
 
       <div class="cta-buttons">
@@ -240,6 +270,7 @@
     <div>
       <img src="allanmain.jpg" style="width:100%; border-radius:16px;">
     </div>
+
   </div>
 </section>
 
@@ -249,21 +280,23 @@
     <h2 class="section-title">My Story</h2>
 
     <div class="story-content">
+
       <p>
-        I am currently based in Ireland, where I am pursuing a Master’s in Information Systems for Business Performance at University College Cork. After completing a bachelor’s in Mechanical Engineering, I moved into the tech industry to understand how technical systems and business needs come together.
+        I am currently based in Ireland, where I am pursuing a Master’s in Information Systems for Business Performance at University College Cork. After completing a bachelor’s in Mechanical Engineering, I moved into the tech industry to understand how technical systems and business needs work together.
       </p>
 
       <p>
-        Over the past 5+ years, I’ve worked across India and the Middle East in fintech roles, focusing on payment systems, APIs, and enterprise onboarding.
+        Over 5+ years, I have worked across India and the Middle East in fintech roles involving payment systems, APIs, and enterprise onboarding.
       </p>
 
       <p>
-        This has given me exposure to how banks, payment providers, and merchants operate together to deliver reliable digital payment experiences.
+        This has given me exposure to how banks, payment providers, and merchants collaborate to deliver reliable digital payment experiences.
       </p>
 
       <p>
-        I currently work as a Technical Support Engineer at MoneyHash, helping merchants design and operate payment flows across multiple platforms and regions.
+        I currently work as a Technical Support Engineer at MoneyHash, supporting merchants in designing and operating payment flows across multiple platforms and regions.
       </p>
+
     </div>
   </div>
 </section>
@@ -299,6 +332,62 @@
     </div>
   </div>
 </section>
+
+<!-- BEYOND -->
+<section id="beyond">
+  <div class="container">
+    <h2 class="section-title">Beyond Work</h2>
+
+    <div class="story-content">
+      <p>
+        Outside of work, I have spent years playing keyboard in church, which taught me discipline, consistency, and patience.
+      </p>
+
+      <p>
+        I am also a long-time Arsenal fan, which has taught patience in its own way.
+      </p>
+
+      <p>
+        Recently, I’ve started exploring more adventurous experiences like skydiving in Dubai.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Let’s Connect</h2>
+
+    <div class="contact-grid">
+
+      <div class="contact-item">
+        <h3>Email</h3>
+        <p>allankt1998@gmail.com</p>
+      </div>
+
+      <div class="contact-item">
+        <h3>Phone</h3>
+        <p>+353 870 391 037</p>
+      </div>
+
+      <div class="contact-item">
+        <h3>LinkedIn</h3>
+        <p>linkedin.com/in/allan-thomson</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+const btn = document.getElementById("mobile-menu-btn");
+const menu = document.getElementById("mobile-menu");
+
+btn.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
+</script>
 
 </body>
 </html>
