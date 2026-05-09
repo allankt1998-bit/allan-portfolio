@@ -1,182 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Allan Thomson | Portfolio</title>
+<!-- Hero Section (ONLY TEXT TWEAKED) -->
+<section id="hero">
+  <div class="hero-wrapper" style="padding: 0 2rem;">
+    <div class="hero-content">
+      <h1>Technical Customer Success & Solutions Engineering</h1>
 
-<script src="https://cdn.tailwindcss.com"></script>
-
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-<style>
-body{
-  font-family: Inter, sans-serif;
-  background:#0b1220;
-  color:#e5e7eb;
-  scroll-behavior:smooth;
-}
-
-h1,h2,h3{ font-family: Syne, sans-serif; }
-
-.gradient-text{
-  background: linear-gradient(90deg,#38bdf8,#a78bfa);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.section{
-  padding: 80px 24px;
-}
-
-.container{
-  max-width: 1100px;
-  margin:auto;
-}
-
-/* Cards */
-.card{
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 18px;
-  padding: 24px;
-  transition: 0.3s ease;
-}
-
-.card:hover{
-  transform: translateY(-6px);
-  border-color: rgba(56,189,248,0.4);
-}
-
-/* Image styling */
-.img{
-  width:100%;
-  border-radius:18px;
-  object-fit:cover;
-}
-
-/* Grid for images */
-.grid-beyond{
-  display:grid;
-  grid-template-columns: 2fr 1fr;
-  gap:16px;
-}
-
-.grid-right{
-  display:grid;
-  gap:16px;
-}
-
-@media(max-width:768px){
-  .grid-beyond{
-    grid-template-columns:1fr;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<!-- HERO -->
-<section class="section container">
-  <h1 class="text-5xl md:text-6xl font-bold leading-tight">
-    Technical Customer Success & Solutions Engineering
-  </h1>
-
-  <p class="mt-6 text-lg text-gray-300 max-w-3xl">
-    Helping businesses build and run reliable digital payment experiences across global markets.
-  </p>
-
-  <p class="mt-4 text-gray-400 max-w-2xl">
-    5+ years of experience across India and the Middle East in enterprise onboarding, payment integrations, and system implementation.
-  </p>
-</section>
-
-<!-- STORY -->
-<section class="section container">
-  <h2 class="text-3xl font-semibold gradient-text mb-6">My Story</h2>
-
-  <p class="text-gray-300 leading-relaxed mb-4">
-    Currently based in Ireland, pursuing a Master’s in Information Systems for Business Performance at University College Cork after completing a bachelor’s degree in Mechanical Engineering.
-  </p>
-
-  <p class="text-gray-300 leading-relaxed mb-4">
-    Over the past 4 years in the Middle East and 1+ year in India, experience has been built in fintech, working with payment systems, APIs, and enterprise onboarding to help businesses run reliable digital payment flows.
-  </p>
-
-  <p class="text-gray-300 leading-relaxed mb-4">
-    Exposure across banks, payment providers, and enterprise teams has shaped an understanding of how real-world payment systems operate across regions.
-  </p>
-
-  <p class="text-gray-300 leading-relaxed">
-    Currently working as a Technical Support Engineer at MoneyHash, supporting merchants in integrating and operating payment systems across platforms.
-  </p>
-</section>
-
-<!-- WHAT I BRING -->
-<section class="section container">
-  <h2 class="text-3xl font-semibold gradient-text mb-10">What I Bring</h2>
-
-  <div class="grid md:grid-cols-3 gap-6">
-
-    <div class="card">
-      <h3 class="font-semibold mb-2">Systems Thinking</h3>
-      <p class="text-gray-400 text-sm">
-        Understanding how APIs, payment gateways, and enterprise systems connect to deliver reliable experiences.
+      <p class="subtitle">
+        Helping businesses design and run reliable payment experiences across global markets.
       </p>
+
+      <p class="supporting-text">
+        5+ years of experience across India and the Middle East in enterprise onboarding, payment integrations, and system implementation.
+      </p>
+
+      <div class="cta-buttons">
+        <a href="#story" class="btn btn-primary"><span>Read My Story</span></a>
+        <a href="#contact" class="btn btn-secondary"><span>Get in Touch</span></a>
+      </div>
     </div>
 
-    <div class="card">
-      <h3 class="font-semibold mb-2">Customer Implementation</h3>
-      <p class="text-gray-400 text-sm">
-        Turning business needs into working payment flows through onboarding and integration support.
-      </p>
+    <div class="hero-image">
+      <div class="hero-image-container">
+        <img src="allanmain.jpg" alt="Allan Thomson" loading="lazy">
+      </div>
     </div>
-
-    <div class="card">
-      <h3 class="font-semibold mb-2">Enterprise Payments</h3>
-      <p class="text-gray-400 text-sm">
-        Experience across global payment ecosystems working with banks, PSPs, and merchants.
-      </p>
-    </div>
-
   </div>
 </section>
 
-<!-- BEYOND WORK (FIXED IMAGE STORY LAYOUT) -->
-<section class="section container">
-  <h2 class="text-3xl font-semibold gradient-text mb-8">Beyond Work</h2>
 
-  <div class="grid-beyond">
+<!-- STORY (ONLY FIRST PARAGRAPH REFINED) -->
+<section id="story">
+  <div class="container">
+    <h2 class="section-title">My Story</h2>
 
-    <!-- MAIN IMAGE -->
-    <div>
-      <img src="allanstanding.jpeg" class="img h-[420px]" />
+    <div class="story-content">
+
+      <p>
+        I am currently based in Ireland, where I am pursuing a Master’s in Information Systems for Business Performance at University College Cork. After completing a bachelor’s degree in Mechanical Engineering, I moved into the tech industry to better understand how technical systems and business needs work together in real environments.
+      </p>
+
+      <p>
+        Over the past 4+ years, I have worked across India and the Middle East, including Kuwait and wider GCC markets, in fintech-focused roles. This has involved working closely with payment systems, APIs, and enterprise onboarding to help businesses build reliable and scalable digital payment experiences.
+      </p>
+
+      <p>
+        This experience has given me exposure to how enterprise systems operate across banks, payment providers, and merchants, and how technical implementation directly impacts customer experience and adoption.
+      </p>
+
+      <p>
+        I currently work as a Technical Support Engineer at MoneyHash, supporting merchants in implementing and operating payment flows across multiple platforms and regions.
+      </p>
+
     </div>
-
-    <!-- SIDE IMAGES -->
-    <div class="grid-right">
-      <img src="skydiving.png" class="img h-[200px]" />
-      <img src="keyboard.png" class="img h-[200px]" />
-    </div>
-
-  </div>
-
-  <p class="text-gray-300 mt-6">
-    Music has been a long-standing part of life through playing keyboard in church. A long-time Arsenal supporter, which has taught patience and consistency over time. More recently, experiences like skydiving in Dubai reflect a growing interest in stepping outside comfort zones.
-  </p>
-</section>
-
-<!-- CONTACT -->
-<section class="section container text-center border-t border-white/10">
-  <h2 class="text-3xl font-semibold gradient-text">Let’s Connect</h2>
-
-  <div class="mt-8 flex flex-col md:flex-row justify-center gap-6 text-gray-300">
-    <div class="card">📧 Email: allankt1998@gmail.com</div>
-    <div class="card">📱 Phone: +353 870 391 037</div>
-    <div class="card">💼 LinkedIn</div>
   </div>
 </section>
 
-</body>
-</html>
+
+<!-- CAPABILITIES (UPDATED SECTION - MAIN FIX) -->
+<section id="capabilities">
+  <div class="container">
+    <h2 class="section-title">What I Bring to the Table</h2>
+
+    <div class="capabilities-grid">
+
+      <!-- BOX 1 -->
+      <div class="capability-card">
+        <h3>Enterprise Client Engagement</h3>
+        <p>
+          Working directly with enterprise clients across fintech and payments to lead onboarding, solution walkthroughs, and technical demos for senior stakeholders across global markets.
+        </p>
+      </div>
+
+      <!-- BOX 2 -->
+      <div class="capability-card">
+        <h3>Solution Design & Problem Solving</h3>
+        <p>
+          Translating client requirements into practical technical solutions, identifying the right integration approach, and simplifying complex payment flows into reliable implementations.
+        </p>
+      </div>
+
+      <!-- BOX 3 -->
+      <div class="capability-card">
+        <h3>Payment Infrastructure Expertise</h3>
+        <p>
+          Experience working across global payment ecosystems including banks, PSPs, and merchant platforms to enable scalable and reliable online payment experiences.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
