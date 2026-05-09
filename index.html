@@ -1,198 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Allan Thomson | Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Allan Thomson | Portfolio</title>
 
-  <style>
-    body { font-family: Inter, sans-serif; scroll-behavior: smooth; }
+<script src="https://cdn.tailwindcss.com"></script>
 
-    .bg-grid {
-      background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0);
-      background-size: 38px 38px;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    .glass {
-      background: rgba(255,255,255,0.06);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(255,255,255,0.08);
-      transition: all 0.25s ease;
-    }
+<style>
+  body{
+    font-family: Inter, sans-serif;
+    background:#0b1220;
+    color:#e5e7eb;
+    scroll-behavior:smooth;
+  }
 
-    .glass:hover {
-      transform: translateY(-4px);
-      border-color: rgba(34,211,238,0.4);
-      box-shadow: 0 10px 30px rgba(34,211,238,0.08);
-    }
+  h1,h2,h3{
+    font-family: Syne, sans-serif;
+  }
 
-    .fade {
-      animation: fadeIn 0.6s ease-out;
-    }
+  .gradient-text{
+    background: linear-gradient(90deg,#38bdf8,#a78bfa);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  .glass{
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+  }
+
+  .glass:hover{
+    transform: translateY(-6px);
+    border-color: rgba(56,189,248,0.4);
+  }
+
+  .nav a{
+    position:relative;
+  }
+
+  .nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-4px;
+    width:0%;
+    height:2px;
+    background:#38bdf8;
+    transition:0.3s;
+  }
+
+  .nav a:hover::after{
+    width:100%;
+  }
+</style>
 </head>
 
-<body class="bg-slate-950 text-white">
+<body>
 
 <!-- NAV -->
-<nav class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl border-b border-white/10">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-
+<nav class="fixed top-0 w-full z-50 bg-[#0b1220]/70 backdrop-blur border-b border-white/5">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between">
     <div class="font-semibold">Allan Thomson</div>
-
-    <div class="hidden md:flex gap-8 text-sm text-slate-300">
-      <a href="#about" class="hover:text-white">About</a>
-      <a href="#story" class="hover:text-white">Story</a>
-      <a href="#skills" class="hover:text-white">Capabilities</a>
-      <a href="#beyond" class="hover:text-white">Beyond</a>
-      <a href="#contact" class="hover:text-white">Contact</a>
+    <div class="hidden md:flex gap-8 text-sm text-gray-300 nav">
+      <a href="#story">Story</a>
+      <a href="#skills">What I Bring</a>
+      <a href="#beyond">Beyond Work</a>
     </div>
-
-    <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')"
-      class="md:hidden text-2xl">☰</button>
-
-  </div>
-
-  <div id="mobileMenu" class="hidden md:hidden px-6 pb-4 text-slate-300">
-    <a href="#about" class="block py-2">About</a>
-    <a href="#story" class="block py-2">Story</a>
-    <a href="#skills" class="block py-2">Capabilities</a>
-    <a href="#beyond" class="block py-2">Beyond</a>
-    <a href="#contact" class="block py-2">Contact</a>
   </div>
 </nav>
 
-<!-- HERO (Stripe-style narrative) -->
-<section id="about" class="min-h-screen pt-28 bg-grid flex items-center">
-  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-14 items-center">
+<!-- HERO -->
+<section class="pt-32 pb-20 max-w-6xl mx-auto px-6">
+  <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+    Technical Customer Success & Solutions Engineering
+  </h1>
 
-    <div class="fade">
-      <h1 class="text-5xl md:text-6xl font-semibold leading-tight mb-6">
-        Technical Customer Success & Solutions Engineering
-      </h1>
+  <p class="mt-6 text-lg text-gray-300 max-w-3xl leading-relaxed">
+    Helping businesses build and run reliable digital payment experiences across global markets.
+  </p>
 
-      <p class="text-slate-300 text-lg leading-8 mb-6">
-        5+ years of international experience across India and the Middle East building and supporting enterprise payment systems, API integrations, and merchant onboarding flows.
-      </p>
-
-      <p class="text-slate-400 mb-8">
-        Focused on translating complex technical systems into reliable, scalable customer experiences.
-      </p>
-
-      <div class="flex gap-4">
-        <a href="#story" class="px-6 py-3 rounded-xl bg-cyan-500 text-slate-950 font-semibold">Explore Story</a>
-        <a href="#contact" class="px-6 py-3 rounded-xl border border-white/15">Connect</a>
-      </div>
-    </div>
-
-    <div class="flex justify-center">
-      <div class="glass rounded-3xl p-4 max-w-sm w-full">
-        <img src="allanmain.jpg" class="rounded-2xl w-full h-[430px] object-contain bg-white p-4" />
-      </div>
-    </div>
-
-  </div>
+  <p class="mt-4 text-gray-400 max-w-2xl">
+    5+ years of experience across India and the Middle East in enterprise onboarding, payment integrations, and system implementation.
+  </p>
 </section>
 
-<!-- STORY (structured narrative) -->
-<section id="story" class="py-28 bg-slate-900">
-  <div class="max-w-4xl mx-auto px-6">
+<!-- STORY -->
+<section id="story" class="max-w-4xl mx-auto px-6 py-16 space-y-8">
 
-    <h2 class="text-4xl font-semibold mb-10">My Story</h2>
+  <h2 class="text-3xl font-semibold gradient-text">My Story</h2>
 
-    <p class="text-slate-300 text-lg leading-8 mb-6">
-      I am currently based in Cork, Ireland, where I am pursuing an MSc in Information Systems for Business Performance at <a class="text-cyan-400" href="https://www.ucc.ie" target="_blank">University College Cork</a>, while working remotely with a fintech company across the Middle East and Africa.
-    </p>
+  <p>
+    I am currently based in Ireland, pursuing a Master’s in Information Systems for Business Performance at the <a class="text-sky-400 underline" href="https://www.ucc.ie" target="_blank">University College Cork</a>. After completing a bachelor’s degree in Mechanical Engineering, I moved into the technology space, where I developed a strong interest in how business and systems work together.
+  </p>
 
-    <p class="text-slate-300 text-lg leading-8 mb-6">
-      Born and raised in Kuwait, I have spent over five years working across enterprise payment systems and customer implementation environments, helping businesses onboard and operate digital financial infrastructure across multiple regions.
-    </p>
+  <p>
+    Over the past 4 years in the Middle East and 1+ year in India, I have worked in fintech, focusing on payment systems, APIs, and enterprise onboarding. This involved helping businesses implement digital payment flows that are reliable, simple, and scalable across different regions.
+  </p>
 
-    <p class="text-slate-300 text-lg leading-8 mb-6">
-      At MoneyHash, I work as a Technical Support Engineer supporting merchants in designing, implementing, and stabilising payment flows in real-world production systems.
-    </p>
+  <p>
+    The experience has provided exposure to how payment ecosystems operate across banks, payment providers, and enterprise merchants, and how these systems need to work seamlessly in real-world environments.
+  </p>
 
-    <p class="text-slate-300 text-lg leading-8">
-      My long-term direction is moving toward Solutions Architecture and technical customer-facing system design roles.
-    </p>
+  <p>
+    Alongside studies, I currently work as a Technical Support Engineer at MoneyHash, supporting merchants in integrating and operating payment systems across multiple platforms.
+  </p>
 
-  </div>
 </section>
 
-<!-- CAPABILITIES -->
-<section id="skills" class="py-28 bg-slate-950">
-  <div class="max-w-6xl mx-auto px-6">
+<!-- WHAT I BRING -->
+<section id="skills" class="max-w-6xl mx-auto px-6 py-20">
+  <h2 class="text-3xl font-semibold mb-10 gradient-text">What I Bring</h2>
 
-    <h2 class="text-4xl font-semibold mb-12">What I Bring</h2>
+  <div class="grid md:grid-cols-3 gap-6">
 
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <div class="glass p-8 rounded-3xl">
-        <h3 class="font-semibold mb-3">Systems & Problem Solving</h3>
-        <p class="text-slate-300">Diagnosing issues across APIs, integrations, and production systems to ensure stable execution.</p>
-      </div>
-
-      <div class="glass p-8 rounded-3xl">
-        <h3 class="font-semibold mb-3">Customer Implementation</h3>
-        <p class="text-slate-300">Translating business requirements into technical onboarding and adoption journeys.</p>
-      </div>
-
-      <div class="glass p-8 rounded-3xl">
-        <h3 class="font-semibold mb-3">Enterprise Payments</h3>
-        <p class="text-slate-300">Working with online payment systems, merchant platforms, and regional financial infrastructure.</p>
-      </div>
-
+    <div class="glass p-6 rounded-2xl">
+      <h3 class="font-semibold mb-2">Systems Thinking</h3>
+      <p class="text-gray-400 text-sm">
+        Understanding how APIs, payment gateways, and enterprise systems connect to deliver reliable user experiences.
+      </p>
     </div>
+
+    <div class="glass p-6 rounded-2xl">
+      <h3 class="font-semibold mb-2">Customer Implementation</h3>
+      <p class="text-gray-400 text-sm">
+        Turning business requirements into working payment flows through onboarding, integration, and technical support.
+      </p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl">
+      <h3 class="font-semibold mb-2">Enterprise Payments</h3>
+      <p class="text-gray-400 text-sm">
+        Experience across global payment ecosystems, working with banks, PSPs, and merchants across multiple regions.
+      </p>
+    </div>
+
   </div>
 </section>
 
 <!-- BEYOND -->
-<section id="beyond" class="py-28 bg-slate-900">
-  <div class="max-w-6xl mx-auto px-6">
+<section id="beyond" class="max-w-5xl mx-auto px-6 py-20">
 
-    <h2 class="text-4xl font-semibold mb-8">Beyond Work</h2>
+  <h2 class="text-3xl font-semibold gradient-text mb-8">Beyond Work</h2>
 
-    <div class="grid md:grid-cols-3 gap-6">
-      <img src="skydiving.png" class="rounded-2xl h-80 w-full object-cover" />
-      <img src="allanstanding.jpeg" class="rounded-2xl h-80 w-full object-cover" />
-      <img src="keyboard.png" class="rounded-2xl h-80 w-full object-cover" />
-    </div>
+  <p class="text-gray-300 leading-relaxed">
+    Music has been a constant part of life, having played keyboard in church for several years.
+  </p>
 
-  </div>
+  <p class="mt-4 text-gray-300">
+    A long-time Arsenal supporter, which has taught patience and consistency over time.
+  </p>
+
+  <p class="mt-4 text-gray-300">
+    More recently, there has been a growing interest in stepping outside comfort zones, including experiences like skydiving in Dubai.
+  </p>
+
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-28 bg-slate-950">
-  <div class="max-w-5xl mx-auto px-6 text-center">
+<section class="text-center py-20 border-t border-white/5">
+  <h2 class="text-3xl font-semibold gradient-text">Let’s Connect</h2>
 
-    <h2 class="text-4xl font-semibold mb-10">Let's Connect</h2>
-
-    <div class="grid md:grid-cols-3 gap-6">
-
-      <div class="glass p-8 rounded-3xl">
-        <p class="font-semibold mb-2">Email</p>
-        <p class="text-slate-300">allankt1998@gmail.com</p>
-      </div>
-
-      <a href="https://linkedin.com/in/allan-thomson" target="_blank" class="glass p-8 rounded-3xl">
-        <p class="font-semibold mb-2">LinkedIn</p>
-        <p class="text-slate-300">Connect</p>
-      </a>
-
-      <div class="glass p-8 rounded-3xl">
-        <p class="font-semibold mb-2">Phone</p>
-        <p class="text-slate-300">+353 870391037</p>
-      </div>
-
-    </div>
-
+  <div class="mt-6 flex flex-col md:flex-row justify-center gap-6 text-gray-300">
+    <p>📧 allankt1998@gmail.com</p>
+    <p>📱 +353 870 391 037</p>
+    <a href="https://linkedin.com" class="text-sky-400">LinkedIn</a>
   </div>
 </section>
 
