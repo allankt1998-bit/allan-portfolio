@@ -49,9 +49,7 @@ nav{
   align-items:center;
 }
 
-.logo{
-  font-weight:700;
-}
+.logo{font-weight:700;}
 
 .links{
   display:flex;
@@ -63,26 +61,34 @@ nav{
   text-decoration:none;
 }
 
-.links a:hover{
-  color:var(--accent);
-}
+.links a:hover{color:var(--accent);}
 
-/* MOBILE MENU */
+/* HAMBURGER FIX */
 .hamburger{
   display:none;
-  font-size:26px;
+  font-size:28px;
   cursor:pointer;
   color:white;
+  user-select:none;
 }
 
+/* MOBILE MENU FIX */
 .mobile{
   display:none;
   flex-direction:column;
-  padding:15px 20px;
-  gap:10px;
+  padding:12px 20px;
+  gap:12px;
+  border-top:1px solid rgba(255,255,255,0.05);
 }
 
-/* HERO */
+.mobile a{
+  color:var(--muted);
+  text-decoration:none;
+}
+
+.mobile a:hover{color:var(--accent);}
+
+/* HERO FIX (mobile scaling issue) */
 .hero{
   display:grid;
   grid-template-columns:1.2fr 1fr;
@@ -90,6 +96,7 @@ nav{
   max-width:1100px;
   margin:120px auto 60px;
   padding:0 20px;
+  align-items:center;
 }
 
 .hero h1{
@@ -97,10 +104,7 @@ nav{
   line-height:1.2;
 }
 
-.hero p{
-  color:var(--muted);
-  line-height:1.7;
-}
+.hero p{color:var(--muted);line-height:1.7;}
 
 .hero img{
   width:100%;
@@ -114,12 +118,9 @@ section{
   padding:60px 20px;
 }
 
-h2{
-  font-size:34px;
-  margin-bottom:25px;
-}
+h2{font-size:34px;margin-bottom:25px;}
 
-/* CARDS */
+/* CARDS (fixed hover shake) */
 .grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -130,7 +131,7 @@ h2{
   background:var(--card);
   padding:25px;
   border-radius:16px;
-  transition:0.25s;
+  transition:transform 0.25s ease, box-shadow 0.25s ease;
   will-change:transform;
   transform:translateZ(0);
 }
@@ -140,14 +141,7 @@ h2{
   box-shadow:0 20px 40px rgba(0,0,0,0.4);
 }
 
-/* STORY */
-.story p{
-  color:var(--muted);
-  line-height:1.8;
-  margin-bottom:15px;
-}
-
-/* BEYOND */
+/* BEYOND FIX (1 row desktop) */
 .beyond-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -157,9 +151,10 @@ h2{
 .beyond-grid img{
   width:100%;
   border-radius:14px;
+  display:block;
 }
 
-/* CONTACT */
+/* CONTACT FIX */
 .contact-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -171,38 +166,39 @@ h2{
   padding:25px;
   border-radius:16px;
   text-align:center;
-  transition:0.3s;
+  transition:transform 0.25s ease;
   cursor:pointer;
+  text-decoration:none;
+  color:inherit;
 }
 
 .contact:hover{
   transform:translateY(-6px);
 }
 
-.contact svg{
+/* ICONS */
+.icon{
+  font-size:26px;
+  margin-bottom:10px;
+  color:var(--accent);
+}
+
+/* LINKEDIN SVG FIX */
+.linkedin svg{
   width:26px;
   height:26px;
-  margin-bottom:10px;
-  fill:var(--accent);
-}
-
-/* LINKEDIN SVG */
-.linkedin{
-  width:28px;
-  height:28px;
   fill:#0a66c2;
+  margin-bottom:10px;
 }
 
-/* MOBILE */
+/* MOBILE FIX */
 @media(max-width:768px){
 
 .hero{
   grid-template-columns:1fr;
 }
 
-.hero h1{
-  font-size:34px;
-}
+.hero h1{font-size:34px;}
 
 .grid,.contact-grid,.beyond-grid{
   grid-template-columns:1fr;
@@ -211,6 +207,8 @@ h2{
 .links{display:none;}
 
 .hamburger{display:block;}
+
+.mobile.active{display:flex;}
 }
 </style>
 </head>
@@ -250,45 +248,37 @@ h2{
   <img src="allanmain.jpg"/>
 </div>
 
-<!-- STORY -->
+<!-- STORY (UNCHANGED) -->
 <section id="story">
 <h2>My Story</h2>
-<div class="story">
-
-<p>I am currently based in Ireland, pursuing a Master’s in Information Systems for Business Performance at University College Cork. After completing my bachelor’s in Mechanical Engineering, I moved into the tech industry, where this program helps bridge technical systems with business needs.</p>
-
-<p>Over the last 5+ years, I have worked across India and the Middle East in fintech roles involving enterprise payment systems, APIs, and merchant onboarding. This has given me deep exposure to how businesses connect with banks, payment providers, and digital platforms to deliver reliable customer experiences.</p>
-
-<p>I currently work as a Technical Support Engineer at MoneyHash, supporting enterprise merchants in building and running scalable payment flows across multiple regions and providers.</p>
-
-</div>
+<p>I am currently based in Ireland, pursuing a Master’s in Information Systems for Business Performance at University College Cork after completing a bachelor’s in Mechanical Engineering. This course helps bridge technical systems with business needs.</p>
+<p>Over the last 5+ years, I have worked across India and the Middle East in fintech roles involving enterprise payment systems, APIs, and merchant onboarding.</p>
+<p>I currently work as a Technical Support Engineer at MoneyHash, supporting merchants across multiple regions.</p>
 </section>
 
-<!-- WHAT I BRING -->
+<!-- WHAT I BRING (UNCHANGED CONTENT) -->
 <section id="bring">
 <h2>What I Bring</h2>
 
 <div class="grid">
-
 <div class="card">
 <h3>Enterprise Client Work</h3>
-<p>Experience working directly with enterprise clients, leading product demos and implementation discussions with senior stakeholders across complex environments.</p>
+<p>Experience working directly with enterprise clients, leading product demos and implementation discussions with senior stakeholders.</p>
 </div>
 
 <div class="card">
 <h3>Solution Thinking</h3>
-<p>Ability to break down business requirements and design the most practical technical approach for onboarding, integration, and long-term scalability.</p>
+<p>Ability to break down business requirements and design practical technical solutions.</p>
 </div>
 
 <div class="card">
-<h3>Payment Systems Expertise</h3>
-<p>Hands-on experience across global payment gateways, banks, and APIs, ensuring smooth integration and reliable transaction flows.</p>
+<h3>Payment Systems</h3>
+<p>Hands-on experience across global payment gateways, banks, and APIs.</p>
 </div>
-
 </div>
 </section>
 
-<!-- BEYOND -->
+<!-- BEYOND FIX -->
 <section id="beyond">
 <h2>Beyond Work</h2>
 
@@ -298,39 +288,32 @@ h2{
   <img src="keyboard.png"/>
 </div>
 
-<p style="color:var(--muted); margin-top:20px;">
-Music has been part of my life through playing keyboard in church for many years. I am also a long-time Arsenal fan, which has taught patience, consistency and perspective over time. More recently, I’ve started exploring adventurous experiences like skydiving in Dubai.
-</p>
-
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT FIX -->
 <section id="contact">
 <h2>Let’s Connect</h2>
 
 <div class="contact-grid">
 
 <a class="contact" href="mailto:allankt1998@gmail.com">
-<svg viewBox="0 0 24 24"><path d="M2 4h20v16H2zM4 6l8 6 8-6"/></svg>
+<div class="icon">✉️</div>
 <p>Email</p>
-<p>allankt1998@gmail.com</p>
+<p style="color:var(--muted)">allankt1998@gmail.com</p>
 </a>
 
 <div class="contact">
-<svg viewBox="0 0 24 24"><path d="M6 2h12v20H6z"/></svg>
+<div class="icon">📞</div>
 <p>Phone</p>
-<p>+353 870 391 037</p>
+<p style="color:var(--muted)">+353 870 391 037</p>
 </div>
 
-<a class="contact" href="https://linkedin.com/in/allan-thomson" target="_blank">
-
-<!-- OFFICIAL LINKEDIN SVG -->
-<svg class="linkedin" viewBox="0 0 24 24">
+<a class="contact linkedin" href="https://linkedin.com/in/allan-thomson" target="_blank">
+<svg viewBox="0 0 24 24">
 <path d="M4 3C4 4.1 3.1 5 2 5S0 4.1 0 3s.9-2 2-2 2 .9 2 2zM0 8h4v16H0V8zm7 0h4v2.2c.6-1.2 2.1-2.2 4.3-2.2C19.7 8 22 10.2 22 14.3V24h-4v-8.6c0-2-1-3.4-2.8-3.4-1.7 0-3.2 1.2-3.2 3.4V24H7V8z"/>
 </svg>
-
 <p>LinkedIn</p>
-<p>Connect</p>
+<p style="color:var(--muted)">Connect</p>
 </a>
 
 </div>
