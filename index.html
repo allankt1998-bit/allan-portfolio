@@ -1,346 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Allan Thomson - Technical Customer Success & Solutions Engineering. 5+ years experience in enterprise payments, APIs, and system implementation." />
-  <title>Allan Thomson | Technical Customer Success & Solutions Engineering</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Allan Thomson | Portfolio</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-    :root {
-      --primary: #06b6d4;
-      --primary-light: #22d3ee;
-      --bg-dark: #0f172a;
-      --bg-darker: #030712;
-      --bg-card: #1e293b;
-      --text-dark: #f8fafc;
-      --text-light: #cbd5e1;
-    }
+:root{
+  --bg:#0f172a;
+  --card:#1e293b;
+  --text:#f8fafc;
+  --muted:#cbd5e1;
+  --primary:#06b6d4;
+}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, var(--bg-darker), var(--bg-dark));
-      color: var(--text-dark);
-      overflow-x: hidden;
-    }
+body{
+  font-family:Inter;
+  background:linear-gradient(135deg,#030712,#0f172a);
+  color:var(--text);
+  overflow-x:hidden;
+}
 
-    h1, h2, h3 {
-      font-family: 'Syne', sans-serif;
-      letter-spacing: -0.02em;
-    }
+h1,h2,h3{font-family:Syne}
 
-    a { text-decoration: none; color: var(--primary); }
+/* NAV */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(15,23,42,.9);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.05);
+  z-index:1000;
+}
 
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(15,23,42,0.9);
-      backdrop-filter: blur(12px);
-      z-index: 1000;
-      border-bottom: 1px solid rgba(6,182,212,0.1);
-    }
+.navwrap{
+  max-width:1200px;
+  margin:auto;
+  padding:1rem 2rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-    .nav-container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 1.2rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+.links{
+  display:flex;
+  gap:2rem;
+}
 
-    .logo {
-      font-family: 'Syne';
-      font-weight: 700;
-    }
+.links a{color:var(--muted);text-decoration:none}
 
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
+.hamburger{
+  display:none;
+  font-size:1.8rem;
+  background:none;
+  border:none;
+  color:white;
+}
 
-    .nav-links a { color: var(--text-light); }
+.mobile{
+  display:none;
+  flex-direction:column;
+  padding:1rem 2rem;
+  background:#0f172a;
+}
 
-    /* HAMBURGER */
-    .hamburger {
-      display: none;
-      font-size: 1.8rem;
-      cursor: pointer;
-      color: white;
-      background: none;
-      border: none;
-    }
+.mobile a{
+  padding:.8rem 0;
+  color:var(--muted);
+}
 
-    .mobile-menu {
-      display: none;
-      flex-direction: column;
-      padding: 1rem 2rem;
-      background: var(--bg-dark);
-      border-top: 1px solid rgba(255,255,255,0.05);
-    }
+/* HERO */
+.hero{
+  padding:8rem 2rem 4rem;
+}
 
-    .mobile-menu a {
-      padding: 0.8rem 0;
-      color: var(--text-light);
-    }
+.herogrid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:3rem;
+  align-items:center;
+}
 
-    /* HERO */
-    #hero {
-      padding: 8rem 2rem 4rem;
-    }
+.hero h1{
+  font-size:3rem;
+  line-height:1.2;
+}
 
-    .hero-wrapper {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
+.hero p{color:var(--muted);margin-top:1rem}
 
-    .hero-buttons {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-top: 1.5rem;
-    }
+.buttons{
+  display:flex;
+  gap:1rem;
+  margin-top:2rem;
+  flex-wrap:wrap;
+}
 
-    .btn {
-      padding: 0.9rem 1.8rem;
-      border-radius: 10px;
-      font-weight: 600;
-      transition: 0.3s;
-      display: inline-block;
-    }
+.btn{
+  padding:.9rem 1.6rem;
+  border-radius:10px;
+  font-weight:600;
+  text-decoration:none;
+}
 
-    .btn-primary {
-      background: var(--primary);
-      color: #000;
-    }
+.primary{background:var(--primary);color:#000}
+.secondary{border:1px solid var(--primary);color:var(--primary)}
 
-    .btn-secondary {
-      border: 1px solid var(--primary);
-      color: var(--primary);
-    }
+.heroimg img{
+  width:100%;
+  border-radius:16px;
+}
 
-    /* STORY / CAPABILITIES */
-    section {
-      padding: 5rem 2rem;
-    }
+/* SECTION */
+section{
+  padding:5rem 2rem;
+  max-width:1200px;
+  margin:auto;
+}
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
+.sectiontitle{
+  font-size:2.2rem;
+  margin-bottom:2rem;
+}
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
+/* WHAT I BRING */
+.grid3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+}
 
-    .card {
-      background: var(--bg-card);
-      padding: 2rem;
-      border-radius: 14px;
-      transition: 0.3s;
-      border: 1px solid rgba(255,255,255,0.05);
-    }
+.card{
+  background:var(--card);
+  padding:2.5rem;
+  border-radius:14px;
+  transition:.3s;
+}
 
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: var(--primary);
-    }
+.card:hover{
+  transform:translateY(-6px);
+  border:1px solid var(--primary);
+}
 
-    /* BEYOND WORK FIX */
-    .beyond-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-    }
+.card h3{
+  font-size:1.2rem;
+  margin-bottom:1rem;
+}
 
-    .beyond-grid img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
+.card p{
+  color:var(--muted);
+  line-height:1.6;
+}
 
-    /* CONTACT */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
+.tags{
+  margin-top:1rem;
+  font-size:.75rem;
+  color:var(--primary);
+  letter-spacing:.08em;
+}
 
-    .contact-card {
-      background: var(--bg-card);
-      padding: 2rem;
-      border-radius: 14px;
-      text-align: center;
-      transition: 0.3s;
-    }
+/* BEYOND */
+.beyondgrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1rem;
+}
 
-    .contact-card:hover {
-      transform: scale(1.05);
-      border: 1px solid var(--primary);
-    }
+.beyondgrid img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  border-radius:12px;
+}
 
-    /* MOBILE FIXES */
-    @media (max-width: 768px) {
-      .hero-wrapper {
-        grid-template-columns: 1fr;
-      }
+.beyondtext{
+  margin-top:2rem;
+  color:var(--muted);
+  line-height:1.8;
+}
 
-      .cards, .contact-grid {
-        grid-template-columns: 1fr;
-      }
+/* CONTACT */
+.contactgrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.5rem;
+}
 
-      .beyond-grid {
-        grid-template-columns: 1fr;
-      }
+.contact{
+  background:var(--card);
+  padding:2rem;
+  border-radius:14px;
+  text-align:center;
+  transition:.3s;
+  text-decoration:none;
+  color:white;
+}
 
-      .nav-links {
-        display: none;
-      }
+.contact:hover{
+  transform:translateY(-6px);
+  border:1px solid var(--primary);
+}
 
-      .hamburger {
-        display: block;
-      }
+.icon{
+  font-size:2rem;
+  margin-bottom:1rem;
+  color:var(--primary);
+}
 
-      .mobile-menu.active {
-        display: flex;
-      }
-    }
-  </style>
+.label{font-weight:600}
+.value{color:var(--muted);margin-top:.5rem;font-size:.9rem}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.herogrid{grid-template-columns:1fr}
+
+.grid3,.contactgrid,.beyondgrid{
+  grid-template-columns:1fr;
+}
+
+.links{display:none}
+
+.hamburger{display:block}
+
+.mobile.active{display:flex}
+
+.hero h1{font-size:2.2rem}
+}
+</style>
 </head>
 
 <body>
 
 <!-- NAV -->
 <nav>
-  <div class="nav-container">
-    <div class="logo">Allan Thomson</div>
+<div class="navwrap">
+  <div><b>Allan Thomson</b></div>
 
-    <ul class="nav-links">
-      <li><a href="#story">Story</a></li>
-      <li><a href="#capabilities">Capabilities</a></li>
-      <li><a href="#beyond">Beyond</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
-  </div>
-
-  <div class="mobile-menu" id="mobileMenu">
+  <div class="links">
     <a href="#story">Story</a>
-    <a href="#capabilities">Capabilities</a>
+    <a href="#bring">What I Bring</a>
     <a href="#beyond">Beyond</a>
     <a href="#contact">Contact</a>
   </div>
+
+  <button class="hamburger" onclick="toggle()">☰</button>
+</div>
+
+<div class="mobile" id="m">
+  <a href="#story">Story</a>
+  <a href="#bring">What I Bring</a>
+  <a href="#beyond">Beyond</a>
+  <a href="#contact">Contact</a>
+</div>
 </nav>
 
 <!-- HERO -->
-<section id="hero">
-  <div class="hero-wrapper">
-    <div>
-      <h1>Technical Customer Success & Solutions Engineering</h1>
-      <p>5+ years across India & Middle East in fintech, payments, APIs, and enterprise onboarding.</p>
+<section class="hero">
+<div class="herogrid">
 
-      <div class="hero-buttons">
-        <a class="btn btn-primary" href="#story">Read My Story</a>
-        <a class="btn btn-secondary" href="#contact">Get in Touch</a>
-      </div>
-    </div>
+<div>
+<h1>Technical Customer Success & Solutions Engineering</h1>
+<p>5+ years across India & Middle East in fintech, APIs, and enterprise payment systems.</p>
 
-    <img src="allanmain.jpg" style="width:100%; border-radius:16px;" />
-  </div>
+<div class="buttons">
+<a class="btn primary" href="#story">Read My Story</a>
+<a class="btn secondary" href="#contact">Get in Touch</a>
+</div>
+</div>
+
+<div class="heroimg">
+<img src="allanmain.jpg"/>
+</div>
+
+</div>
 </section>
 
 <!-- STORY -->
 <section id="story">
-  <div class="container">
-    <h2>My Story</h2>
-    <p>
-      I am currently based in Ireland pursuing a Master’s in Information Systems for Business Performance at University College Cork.
-      The course helps connect technical systems with business needs.
-    </p>
-    <p>
-      Over 5+ years across India and the Middle East, I’ve worked in fintech across payment systems, APIs, and enterprise onboarding,
-      helping businesses build reliable and scalable digital payment experiences.
-    </p>
-  </div>
+<h2 class="sectiontitle">My Story</h2>
+<p style="color:#cbd5e1;line-height:1.8">
+I am currently based in Ireland pursuing a Master’s in Information Systems for Business Performance at University College Cork. The course helps bridge technical systems with business needs.
+<br><br>
+Across 5+ years in India and the Middle East, I have worked in fintech across payment systems, APIs, and enterprise onboarding helping businesses build scalable digital payment experiences.
+</p>
 </section>
 
-<!-- CAPABILITIES -->
-<section id="capabilities">
-  <div class="container">
-    <h2>What I Bring</h2>
+<!-- WHAT I BRING -->
+<section id="bring">
+<h2 class="sectiontitle">What I Bring</h2>
 
-    <div class="cards">
-      <div class="card">
-        <h3>Enterprise Client Engagement</h3>
-        <p>Working with enterprise clients, leading product demos, and aligning stakeholders across technical and business teams.</p>
-      </div>
+<div class="grid3">
 
-      <div class="card">
-        <h3>Technical Problem Solving</h3>
-        <p>Understanding client needs, diagnosing integration challenges, and identifying the most effective implementation approach.</p>
-      </div>
+<div class="card">
+<h3>Enterprise Client Engagement</h3>
+<p>Working with enterprise clients, leading product demos and aligning technical and business stakeholders.</p>
+<div class="tags">CLIENTS • DEMOS • STAKEHOLDERS</div>
+</div>
 
-      <div class="card">
-        <h3>Payments & Integration Experience</h3>
-        <p>Experience across global payment systems, APIs, onboarding flows, and enterprise-level implementations.</p>
-      </div>
-    </div>
-  </div>
+<div class="card">
+<h3>Technical Problem Solving</h3>
+<p>Understanding requirements and identifying the most effective technical approach for implementation.</p>
+<div class="tags">APIs • LOGIC • INTEGRATION</div>
+</div>
+
+<div class="card">
+<h3>Payments & Systems</h3>
+<p>Experience across global payment ecosystems, APIs, onboarding and enterprise integrations.</p>
+<div class="tags">FINTECH • PAYMENTS • SYSTEMS</div>
+</div>
+
+</div>
 </section>
 
 <!-- BEYOND -->
 <section id="beyond">
-  <div class="container">
-    <h2>Beyond Work</h2>
+<h2 class="sectiontitle">Beyond Work</h2>
 
-    <div class="beyond-grid">
-      <img src="allanstanding.jpeg">
-      <img src="skydiving.png">
-      <img src="keyboard.png">
-    </div>
-  </div>
+<div class="beyondgrid">
+<img src="allanstanding.jpeg"/>
+<img src="skydiving.png"/>
+<img src="keyboard.png"/>
+</div>
+
+<p class="beyondtext">
+I’ve played keyboard in church for years, which taught patience and consistency. I’m also a long-time Arsenal fan, which teaches resilience. Recently, I’ve been exploring adventurous experiences like skydiving in Dubai.
+</p>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="container">
-    <h2>Let’s Connect</h2>
+<h2 class="sectiontitle">Let’s Connect</h2>
 
-    <div class="contact-grid">
-      <a class="contact-card" href="mailto:allankt1998@gmail.com">
-        📧<br>Email
-      </a>
+<div class="contactgrid">
 
-      <a class="contact-card" href="tel:+353870391037">
-        📞<br>Phone
-      </a>
+<a href="mailto:allankt1998@gmail.com" class="contact">
+<div class="icon">📧</div>
+<div class="label">Email</div>
+<div class="value">allankt1998@gmail.com</div>
+</a>
 
-      <a class="contact-card" href="https://linkedin.com/in/allan-thomson">
-        💼<br>LinkedIn
-      </a>
-    </div>
-  </div>
+<a href="tel:+353870391037" class="contact">
+<div class="icon">📞</div>
+<div class="label">Phone</div>
+<div class="value">+353 870 391 037</div>
+</a>
+
+<a href="https://linkedin.com/in/allan-thomson" class="contact">
+<div class="icon">💼</div>
+<div class="label">LinkedIn</div>
+<div class="value">Connect with me</div>
+</a>
+
+</div>
 </section>
 
 <script>
-function toggleMenu() {
-  document.getElementById("mobileMenu").classList.toggle("active");
+function toggle(){
+document.getElementById("m").classList.toggle("active");
 }
 </script>
 
