@@ -1,6 +1,225 @@
-<!-- Hero Section (ONLY TEXT TWEAKED) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Allan Thomson - Technical Customer Success & Solutions Engineering. 5+ years experience in enterprise payments, APIs, and system implementation." />
+  <title>Allan Thomson | Technical Customer Success & Solutions Engineering</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #06b6d4;
+      --primary-dark: #0891b2;
+      --primary-light: #22d3ee;
+      --accent: #8b5cf6;
+      --text-dark: #f8fafc;
+      --text-light: #cbd5e1;
+      --bg-dark: #0f172a;
+      --bg-darker: #030712;
+      --bg-card: #1e293b;
+      --border: #334155;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background: linear-gradient(135deg, var(--bg-darker) 0%, var(--bg-dark) 100%);
+    }
+
+    h1,h2,h3 {
+      font-family: 'Syne', sans-serif;
+    }
+
+    a { color: var(--primary); text-decoration: none; }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15,23,42,0.92);
+      backdrop-filter: blur(12px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(6,182,212,0.1);
+    }
+
+    nav .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-weight: 700;
+    }
+
+    nav .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    nav .nav-links a {
+      color: var(--text-light);
+    }
+
+    nav .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    /* HERO */
+    #hero {
+      padding-top: 8rem;
+      padding-bottom: 5rem;
+    }
+
+    .hero-wrapper {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      padding: 0 2rem;
+      align-items: center;
+    }
+
+    @media (max-width:768px){
+      .hero-wrapper {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hero-content h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .subtitle {
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .supporting-text {
+      color: var(--text-light);
+      margin-bottom: 2rem;
+    }
+
+    /* BUTTONS */
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #000;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--primary);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 5rem 2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    /* STORY */
+    .story-content p {
+      margin-bottom: 1.2rem;
+      color: var(--text-light);
+    }
+
+    /* CAPABILITIES */
+    .capabilities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 1.5rem;
+    }
+
+    .capability-card {
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      transition: 0.3s;
+    }
+
+    .capability-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--primary);
+    }
+
+    .capability-card h3 {
+      margin-bottom: 0.8rem;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+      gap: 1.5rem;
+    }
+
+    .contact-item {
+      background: var(--bg-card);
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="container">
+    <div class="logo">Allan Thomson</div>
+    <ul class="nav-links">
+      <li><a href="#story">Story</a></li>
+      <li><a href="#capabilities">Capabilities</a></li>
+      <li><a href="#beyond">Beyond</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
 <section id="hero">
-  <div class="hero-wrapper" style="padding: 0 2rem;">
+  <div class="hero-wrapper">
     <div class="hero-content">
       <h1>Technical Customer Success & Solutions Engineering</h1>
 
@@ -9,83 +228,77 @@
       </p>
 
       <p class="supporting-text">
-        5+ years of experience across India and the Middle East in enterprise onboarding, payment integrations, and system implementation.
+        5+ years across India and the Middle East in enterprise onboarding, APIs, and payment system implementation.
       </p>
 
       <div class="cta-buttons">
-        <a href="#story" class="btn btn-primary"><span>Read My Story</span></a>
-        <a href="#contact" class="btn btn-secondary"><span>Get in Touch</span></a>
+        <a class="btn btn-primary" href="#story">Read My Story</a>
+        <a class="btn btn-secondary" href="#contact">Get in Touch</a>
       </div>
     </div>
 
-    <div class="hero-image">
-      <div class="hero-image-container">
-        <img src="allanmain.jpg" alt="Allan Thomson" loading="lazy">
-      </div>
+    <div>
+      <img src="allanmain.jpg" style="width:100%; border-radius:16px;">
     </div>
   </div>
 </section>
 
-
-<!-- STORY (ONLY FIRST PARAGRAPH REFINED) -->
+<!-- STORY -->
 <section id="story">
   <div class="container">
     <h2 class="section-title">My Story</h2>
 
     <div class="story-content">
-
       <p>
-        I am currently based in Ireland, where I am pursuing a Master’s in Information Systems for Business Performance at University College Cork. After completing a bachelor’s degree in Mechanical Engineering, I moved into the tech industry to better understand how technical systems and business needs work together in real environments.
+        I am currently based in Ireland, where I am pursuing a Master’s in Information Systems for Business Performance at University College Cork. After completing a bachelor’s in Mechanical Engineering, I moved into the tech industry to understand how technical systems and business needs come together.
       </p>
 
       <p>
-        Over the past 4+ years, I have worked across India and the Middle East, including Kuwait and wider GCC markets, in fintech-focused roles. This has involved working closely with payment systems, APIs, and enterprise onboarding to help businesses build reliable and scalable digital payment experiences.
+        Over the past 4+ years, I’ve worked across India and the Middle East in fintech roles, focusing on payment systems, APIs, and enterprise onboarding.
       </p>
 
       <p>
-        This experience has given me exposure to how enterprise systems operate across banks, payment providers, and merchants, and how technical implementation directly impacts customer experience and adoption.
+        This has given me exposure to how banks, payment providers, and merchants operate together to deliver reliable digital payment experiences.
       </p>
 
       <p>
-        I currently work as a Technical Support Engineer at MoneyHash, supporting merchants in implementing and operating payment flows across multiple platforms and regions.
+        I currently work as a Technical Support Engineer at MoneyHash, helping merchants design and operate payment flows across multiple platforms and regions.
       </p>
-
     </div>
   </div>
 </section>
 
-
-<!-- CAPABILITIES (UPDATED SECTION - MAIN FIX) -->
+<!-- CAPABILITIES -->
 <section id="capabilities">
   <div class="container">
     <h2 class="section-title">What I Bring to the Table</h2>
 
     <div class="capabilities-grid">
 
-      <!-- BOX 1 -->
       <div class="capability-card">
         <h3>Enterprise Client Engagement</h3>
         <p>
-          Working directly with enterprise clients across fintech and payments to lead onboarding, solution walkthroughs, and technical demos for senior stakeholders across global markets.
+          Working with enterprise clients across fintech to lead onboarding, solution walkthroughs, and technical demos for senior stakeholders.
         </p>
       </div>
 
-      <!-- BOX 2 -->
       <div class="capability-card">
         <h3>Solution Design & Problem Solving</h3>
         <p>
-          Translating client requirements into practical technical solutions, identifying the right integration approach, and simplifying complex payment flows into reliable implementations.
+          Translating client requirements into practical technical solutions and simplifying complex integration flows into working systems.
         </p>
       </div>
 
-      <!-- BOX 3 -->
       <div class="capability-card">
         <h3>Payment Infrastructure Expertise</h3>
         <p>
-          Experience working across global payment ecosystems including banks, PSPs, and merchant platforms to enable scalable and reliable online payment experiences.
+          Experience across banks, PSPs, and merchant platforms enabling scalable and reliable online payment ecosystems.
         </p>
       </div>
 
     </div>
   </div>
 </section>
+
+</body>
+</html>
