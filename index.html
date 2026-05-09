@@ -10,77 +10,80 @@
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <style>
-  body{
-    font-family: Inter, sans-serif;
-    background:#0b1220;
-    color:#e5e7eb;
-    scroll-behavior:smooth;
-  }
+body{
+  font-family: Inter, sans-serif;
+  background:#0b1220;
+  color:#e5e7eb;
+  scroll-behavior:smooth;
+}
 
-  h1,h2,h3{
-    font-family: Syne, sans-serif;
-  }
+h1,h2,h3{ font-family: Syne, sans-serif; }
 
-  .gradient-text{
-    background: linear-gradient(90deg,#38bdf8,#a78bfa);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-  }
+.gradient-text{
+  background: linear-gradient(90deg,#38bdf8,#a78bfa);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
-  .glass{
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    backdrop-filter: blur(10px);
-    transition: 0.3s ease;
-  }
+.section{
+  padding: 80px 24px;
+}
 
-  .glass:hover{
-    transform: translateY(-6px);
-    border-color: rgba(56,189,248,0.4);
-  }
+.container{
+  max-width: 1100px;
+  margin:auto;
+}
 
-  .nav a{
-    position:relative;
-  }
+/* Cards */
+.card{
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 24px;
+  transition: 0.3s ease;
+}
 
-  .nav a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-4px;
-    width:0%;
-    height:2px;
-    background:#38bdf8;
-    transition:0.3s;
-  }
+.card:hover{
+  transform: translateY(-6px);
+  border-color: rgba(56,189,248,0.4);
+}
 
-  .nav a:hover::after{
-    width:100%;
+/* Image styling */
+.img{
+  width:100%;
+  border-radius:18px;
+  object-fit:cover;
+}
+
+/* Grid for images */
+.grid-beyond{
+  display:grid;
+  grid-template-columns: 2fr 1fr;
+  gap:16px;
+}
+
+.grid-right{
+  display:grid;
+  gap:16px;
+}
+
+@media(max-width:768px){
+  .grid-beyond{
+    grid-template-columns:1fr;
   }
+}
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
-<nav class="fixed top-0 w-full z-50 bg-[#0b1220]/70 backdrop-blur border-b border-white/5">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between">
-    <div class="font-semibold">Allan Thomson</div>
-    <div class="hidden md:flex gap-8 text-sm text-gray-300 nav">
-      <a href="#story">Story</a>
-      <a href="#skills">What I Bring</a>
-      <a href="#beyond">Beyond Work</a>
-    </div>
-  </div>
-</nav>
-
 <!-- HERO -->
-<section class="pt-32 pb-20 max-w-6xl mx-auto px-6">
+<section class="section container">
   <h1 class="text-5xl md:text-6xl font-bold leading-tight">
     Technical Customer Success & Solutions Engineering
   </h1>
 
-  <p class="mt-6 text-lg text-gray-300 max-w-3xl leading-relaxed">
+  <p class="mt-6 text-lg text-gray-300 max-w-3xl">
     Helping businesses build and run reliable digital payment experiences across global markets.
   </p>
 
@@ -90,85 +93,88 @@
 </section>
 
 <!-- STORY -->
-<section id="story" class="max-w-4xl mx-auto px-6 py-16 space-y-8">
+<section class="section container">
+  <h2 class="text-3xl font-semibold gradient-text mb-6">My Story</h2>
 
-  <h2 class="text-3xl font-semibold gradient-text">My Story</h2>
-
-  <p>
-    I am currently based in Ireland, pursuing a Master’s in Information Systems for Business Performance at the <a class="text-sky-400 underline" href="https://www.ucc.ie" target="_blank">University College Cork</a>. After completing a bachelor’s degree in Mechanical Engineering, I moved into the technology space, where I developed a strong interest in how business and systems work together.
+  <p class="text-gray-300 leading-relaxed mb-4">
+    Currently based in Ireland, pursuing a Master’s in Information Systems for Business Performance at University College Cork after completing a bachelor’s degree in Mechanical Engineering.
   </p>
 
-  <p>
-    Over the past 4 years in the Middle East and 1+ year in India, I have worked in fintech, focusing on payment systems, APIs, and enterprise onboarding. This involved helping businesses implement digital payment flows that are reliable, simple, and scalable across different regions.
+  <p class="text-gray-300 leading-relaxed mb-4">
+    Over the past 4 years in the Middle East and 1+ year in India, experience has been built in fintech, working with payment systems, APIs, and enterprise onboarding to help businesses run reliable digital payment flows.
   </p>
 
-  <p>
-    The experience has provided exposure to how payment ecosystems operate across banks, payment providers, and enterprise merchants, and how these systems need to work seamlessly in real-world environments.
+  <p class="text-gray-300 leading-relaxed mb-4">
+    Exposure across banks, payment providers, and enterprise teams has shaped an understanding of how real-world payment systems operate across regions.
   </p>
 
-  <p>
-    Alongside studies, I currently work as a Technical Support Engineer at MoneyHash, supporting merchants in integrating and operating payment systems across multiple platforms.
+  <p class="text-gray-300 leading-relaxed">
+    Currently working as a Technical Support Engineer at MoneyHash, supporting merchants in integrating and operating payment systems across platforms.
   </p>
-
 </section>
 
 <!-- WHAT I BRING -->
-<section id="skills" class="max-w-6xl mx-auto px-6 py-20">
-  <h2 class="text-3xl font-semibold mb-10 gradient-text">What I Bring</h2>
+<section class="section container">
+  <h2 class="text-3xl font-semibold gradient-text mb-10">What I Bring</h2>
 
   <div class="grid md:grid-cols-3 gap-6">
 
-    <div class="glass p-6 rounded-2xl">
+    <div class="card">
       <h3 class="font-semibold mb-2">Systems Thinking</h3>
       <p class="text-gray-400 text-sm">
-        Understanding how APIs, payment gateways, and enterprise systems connect to deliver reliable user experiences.
+        Understanding how APIs, payment gateways, and enterprise systems connect to deliver reliable experiences.
       </p>
     </div>
 
-    <div class="glass p-6 rounded-2xl">
+    <div class="card">
       <h3 class="font-semibold mb-2">Customer Implementation</h3>
       <p class="text-gray-400 text-sm">
-        Turning business requirements into working payment flows through onboarding, integration, and technical support.
+        Turning business needs into working payment flows through onboarding and integration support.
       </p>
     </div>
 
-    <div class="glass p-6 rounded-2xl">
+    <div class="card">
       <h3 class="font-semibold mb-2">Enterprise Payments</h3>
       <p class="text-gray-400 text-sm">
-        Experience across global payment ecosystems, working with banks, PSPs, and merchants across multiple regions.
+        Experience across global payment ecosystems working with banks, PSPs, and merchants.
       </p>
     </div>
 
   </div>
 </section>
 
-<!-- BEYOND -->
-<section id="beyond" class="max-w-5xl mx-auto px-6 py-20">
-
+<!-- BEYOND WORK (FIXED IMAGE STORY LAYOUT) -->
+<section class="section container">
   <h2 class="text-3xl font-semibold gradient-text mb-8">Beyond Work</h2>
 
-  <p class="text-gray-300 leading-relaxed">
-    Music has been a constant part of life, having played keyboard in church for several years.
-  </p>
+  <div class="grid-beyond">
 
-  <p class="mt-4 text-gray-300">
-    A long-time Arsenal supporter, which has taught patience and consistency over time.
-  </p>
+    <!-- MAIN IMAGE -->
+    <div>
+      <img src="allanstanding.jpeg" class="img h-[420px]" />
+    </div>
 
-  <p class="mt-4 text-gray-300">
-    More recently, there has been a growing interest in stepping outside comfort zones, including experiences like skydiving in Dubai.
-  </p>
+    <!-- SIDE IMAGES -->
+    <div class="grid-right">
+      <img src="skydiving.png" class="img h-[200px]" />
+      <img src="keyboard.png" class="img h-[200px]" />
+    </div>
 
+  </div>
+
+  <p class="text-gray-300 mt-6">
+    Music has been a long-standing part of life through playing keyboard in church. A long-time Arsenal supporter, which has taught patience and consistency over time. More recently, experiences like skydiving in Dubai reflect a growing interest in stepping outside comfort zones.
+  </p>
 </section>
 
 <!-- CONTACT -->
-<section class="text-center py-20 border-t border-white/5">
+<section class="section container text-center border-t border-white/10">
   <h2 class="text-3xl font-semibold gradient-text">Let’s Connect</h2>
 
-  <div class="mt-6 flex flex-col md:flex-row justify-center gap-6 text-gray-300">
-    <p>📧 allankt1998@gmail.com</p>
-    <p>📱 +353 870 391 037</p>
-    <a href="https://linkedin.com" class="text-sky-400">LinkedIn</a>
+  <div class="mt-8 flex flex-col md:flex-row justify-center gap-6 text-gray-300">
+    <div class="card">📧 Email: allankt1998@gmail.com</div>
+    <div class="card">📱 Phone: +353 870 391 037</div>
+    <div class="card">💼 LinkedIn</div>
   </div>
 </section>
 
